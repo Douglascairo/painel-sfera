@@ -1,0 +1,463 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Resultado Sfera 2026</title>
+<style>
+/* Layout: BI corporativo Sfera — header azul fixo, filtros, resumo YTD, tendência anual (com cenário de abertura de loja), canais, ranking, tabela */
+:root{
+  --bg:#eef2f8; --surface:#ffffff; --surface2:#f4f7fc; --surface3:#e9eff8;
+  --ink:#0d1a30; --ink2:#44557a; --muted:#8694b0; --border:#dde5f1;
+  --brand:#0a47c2; --brand2:#2e74ff; --brand-deep:#062a7a; --brand-soft:#e6eefc; --teal:#0e8a9c;
+  --good:#1a7a3d; --good-bg:#e4f3ea; --warn:#9a5b00; --warn-bg:#fbefd9; --bad:#b4252b; --bad-bg:#fbe6e6;
+  --shadow:0 1px 2px rgba(13,26,48,.06),0 8px 24px rgba(13,26,48,.06);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#070d1a; --surface:#101829; --surface2:#162035; --surface3:#1a2740;
+  --ink:#e9eefb; --ink2:#aab8d6; --muted:#6a7897; --border:#243149;
+  --brand:#5a92ff; --brand2:#2e74ff; --brand-deep:#8db4ff; --brand-soft:#15223d; --teal:#2bc0d4;
+  --good:#54c278; --good-bg:#12301d; --warn:#f0b64b; --warn-bg:#33270c; --bad:#f2676c; --bad-bg:#3a1416;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#070d1a; --surface:#101829; --surface2:#162035; --surface3:#1a2740;
+  --ink:#e9eefb; --ink2:#aab8d6; --muted:#6a7897; --border:#243149;
+  --brand:#5a92ff; --brand2:#2e74ff; --brand-deep:#8db4ff; --brand-soft:#15223d; --teal:#2bc0d4;
+  --good:#54c278; --good-bg:#12301d; --warn:#f0b64b; --warn-bg:#33270c; --bad:#f2676c; --bad-bg:#3a1416;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:"Manrope",ui-sans-serif,system-ui,"Segoe UI",Roboto,Arial,sans-serif;font-variant-numeric:tabular-nums;line-height:1.45;margin:0}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:800;letter-spacing:-.01em}
+.muted{color:var(--muted)} .ink2{color:var(--ink2)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--brand-deep)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:linear-gradient(100deg,var(--brand-deep),var(--brand));color:#fff;box-shadow:0 6px 20px rgba(6,42,122,.25)}
+.hd{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-block:14px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:.14em}
+.logo .mark{width:30px;height:30px;flex:0 0 auto}
+.logo small{font-weight:600;letter-spacing:.04em;opacity:.85;font-size:11px;display:block;margin-top:-3px}
+.hd .ttl{font-size:14px;font-weight:700;opacity:.95}
+.hd .per{margin-left:auto;font-size:12px;opacity:.9;text-align:right}.hd .per b{font-weight:800}
+.seg{display:inline-flex;background:rgba(255,255,255,.14);border-radius:12px;padding:4px;gap:3px;margin:14px 0 2px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;color:#eaf1ff;font:inherit;font-weight:700;font-size:13px;padding:8px 16px;border-radius:9px;cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--brand-deep);box-shadow:0 2px 6px rgba(0,0,0,.18)}
+main{padding-block:16px 48px}
+section{margin-top:22px}
+.sh{display:flex;align-items:baseline;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.sh h2{font-size:17px} .sh .sub{font-size:12.5px;color:var(--muted)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:13px 14px;box-shadow:var(--shadow)}
+.fg{display:flex;flex-direction:column;gap:5px}
+.fg label{font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.fg select,.fg input{font:inherit;font-weight:600;font-size:13px;color:var(--ink);background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:8px 11px;min-width:140px}
+.fg input{min-width:150px}
+.btn{font:inherit;font-weight:700;font-size:12.5px;border:1px solid var(--border);background:var(--surface2);color:var(--ink2);border-radius:9px;padding:8px 13px;cursor:pointer}
+.btn:hover{border-color:var(--brand2);color:var(--brand)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+.kpi .lab{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.kpi .big{font-size:26px;font-weight:800;margin-top:7px;letter-spacing:-.02em}
+.kpi .sub{font-size:12.5px;margin-top:5px;color:var(--ink2);font-weight:600}
+.kpi.accent{background:linear-gradient(160deg,var(--brand),var(--brand-deep));color:#fff;border-color:transparent}
+.kpi.accent .lab,.kpi.accent .sub{color:rgba(255,255,255,.82)}
+.chip{display:inline-flex;align-items:center;gap:5px;font-weight:800;font-size:12.5px;padding:3px 9px;border-radius:999px}
+.c-good{color:var(--good);background:var(--good-bg)} .c-bad{color:var(--bad);background:var(--bad-bg)} .c-warn{color:var(--warn);background:var(--warn-bg)}
+.kpi.accent .chip{background:rgba(255,255,255,.2)!important;color:#fff!important}
+.tend{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+.tend .verdict{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.tend .vbig{font-size:34px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.tend .vtxt{font-size:13.5px;font-weight:700;color:var(--ink2)}
+.tbar{position:relative;height:40px;background:var(--surface3);border-radius:10px;overflow:hidden;margin:22px 0 6px}
+.tbar .seg1{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(180deg,var(--brand),var(--brand-deep))}
+.tbar .seg2{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(135deg,var(--teal),var(--teal) 7px,color-mix(in srgb,var(--teal) 72%,#fff) 7px,color-mix(in srgb,var(--teal) 72%,#fff) 14px)}
+.tbar .goal{position:absolute;top:-4px;bottom:-4px;width:3px;background:var(--ink);box-shadow:0 0 0 2px var(--surface)}
+.tbar .glab{position:absolute;top:-19px;transform:translateX(-50%);font-size:10.5px;font-weight:800;color:var(--ink);white-space:nowrap}
+.tleg{display:flex;gap:16px;flex-wrap:wrap;font-size:11.5px;font-weight:700;color:var(--ink2);margin-top:14px}
+.tleg i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:5px}
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.tcard{background:var(--surface2);border-radius:12px;padding:12px 13px}
+.tcard .k{font-size:10.5px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.tcard .v{font-size:19px;font-weight:800;margin-top:4px;letter-spacing:-.01em}
+.tcard .n{font-size:11px;color:var(--muted);font-weight:600;margin-top:2px}
+.needline{margin:16px 0 2px;font-size:12.5px;color:var(--ink2);font-weight:600}.needline b{color:var(--ink)}
+.readout{display:inline-flex;align-items:center;font:inherit;font-weight:800;font-size:15px;background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:8px 13px;min-width:90px}
+.tctrl{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-top:16px;padding-top:15px;border-top:1px dashed var(--border)}
+.segl{display:inline-flex;background:var(--surface3);border-radius:10px;padding:3px;gap:3px}
+.segl button{border:0;background:transparent;color:var(--ink2);font:inherit;font-weight:700;font-size:12.5px;padding:8px 13px;border-radius:8px;cursor:pointer;white-space:nowrap}
+.segl button[aria-pressed="true"]{background:var(--surface);color:var(--brand);box-shadow:0 1px 3px rgba(0,0,0,.14)}
+.scbox{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.sccard{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:14px 15px}
+.sccard.on{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand-soft)}
+.sccard .k{font-size:11px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.sccard .v{font-size:25px;font-weight:800;margin-top:3px;letter-spacing:-.02em}
+.sccard .n{font-size:12px;color:var(--ink2);font-weight:600;margin-top:4px}
+.scmech{margin-top:12px;background:var(--brand-soft);border-radius:12px;padding:12px 15px;font-size:12.5px;color:var(--ink);font-weight:600}
+.scmech b{font-weight:800}
+.effort{margin-top:14px;background:var(--surface2);border-radius:12px;padding:13px 15px;font-size:13px;font-weight:600;color:var(--ink)}
+.effort b{font-weight:800}
+.canais{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cc{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.cc .rail{position:absolute;left:0;top:0;bottom:0;width:4px}
+.cc.sal .rail{background:#2e74ff}.cc.cli .rail{background:var(--teal)}.cc.tot .rail{background:var(--brand-deep)}
+.cc h3{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink2)}
+.cc .v{font-size:22px;font-weight:800;margin:9px 0 2px;letter-spacing:-.02em}
+.cc .grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}
+.cc .mini{background:var(--surface2);border-radius:10px;padding:8px 10px}
+.cc .mini .k{font-size:10.5px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.cc .mini .val{font-size:14.5px;font-weight:800;margin-top:2px}
+.ranks{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.rk{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:13px 15px;box-shadow:var(--shadow);cursor:pointer;transition:border-color .12s}
+.rk:hover{border-color:var(--brand2)}
+.rk.on{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand-soft),var(--shadow)}
+.rk .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.rk .nm{font-weight:800;font-size:15px} .rk .rz{font-weight:800;font-size:15px}
+.rk .sm{font-size:11.5px;color:var(--muted);font-weight:600;margin-top:1px}
+.bar{position:relative;height:10px;background:var(--surface3);border-radius:6px;margin:10px 0 4px;overflow:hidden}
+.bar .fill{position:absolute;left:0;top:0;bottom:0;border-radius:6px}
+.bar .goal{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink2);opacity:.55}
+.rk .ln{display:flex;justify-content:space-between;font-size:11.5px;font-weight:700;color:var(--ink2)}
+.tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:1040px}
+th,td{padding:11px 13px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--border);font-size:13px}
+th{position:sticky;top:0;background:var(--surface3);color:var(--ink2);font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;z-index:1}
+th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}
+tbody tr:hover{background:var(--surface2)}
+td.loja{font-weight:800} td .sup{font-size:11px;color:var(--muted);font-weight:700;display:block}
+.minibar{display:inline-block;width:56px;height:7px;border-radius:4px;background:var(--surface3);position:relative;vertical-align:middle;margin-left:8px;overflow:hidden}
+.minibar i{position:absolute;left:0;top:0;bottom:0;border-radius:4px}
+.val-neg{color:var(--bad)} .val-pos{color:var(--good)}
+tfoot td{font-weight:800;background:var(--surface3);border-top:2px solid var(--border);font-size:13px}
+.note{background:var(--surface);border:1px dashed var(--border);border-radius:14px;padding:15px 17px;font-size:12.5px;color:var(--ink2)}
+.note b{color:var(--ink)} .note ul{margin:8px 0 0;padding-left:18px} .note li{margin:4px 0}
+.foot{margin-top:26px;font-size:11.5px;color:var(--muted);text-align:center;line-height:1.7}
+@media(max-width:880px){.kpis,.canais,.tgrid{grid-template-columns:1fr 1fr}.canais{grid-template-columns:1fr}}
+@media(max-width:560px){.kpis,.tgrid,.scbox{grid-template-columns:1fr 1fr}.scbox{grid-template-columns:1fr}.hd .per{margin-left:0;width:100%;text-align:left}.logo{font-size:19px}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap">
+
+<header>
+  <div class="wrap">
+    <div class="hd">
+      <span class="logo">
+        <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" stroke="#fff" stroke-width="2.4" opacity=".55"/>
+          <path d="M26.5 13.5c-2-1.6-9.5-2.4-9.5 2 0 4.2 10 2.4 10 7 0 4.4-7.6 3.8-10 2" stroke="#fff" stroke-width="2.8" stroke-linecap="round"/>
+        </svg>
+        <span>SFERA<small>O Boticário</small></span>
+      </span>
+      <span class="ttl">Resultado de Vendas · Ano 2026</span>
+      <span class="per">Realizado: <b>01/01 a 05/11/2026</b><br>Reta final: <b>06/11 a 31/12</b> (56 dias)</span>
+    </div>
+    <div class="seg" role="group" aria-label="Canal de venda">
+      <button data-ch="tot" aria-pressed="true">Total (2 canais)</button>
+      <button data-ch="sal" aria-pressed="false">Salão de Vendas</button>
+      <button data-ch="cli" aria-pressed="false">Clique &amp; Retire</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <div class="filters">
+      <div class="fg"><label for="fSup">Supervisora</label><select id="fSup"><option value="">Todas</option></select></div>
+      <div class="fg"><label for="fReg">Regional</label><select id="fReg"><option value="">Todas</option></select></div>
+      <div class="fg"><label for="fQdb">Loja QDB</label><select id="fQdb">
+        <option value="all">Incluir QDB</option><option value="sem">Sem QDB</option><option value="so">Somente QDB</option></select></div>
+      <div class="fg"><label for="fBusca">Buscar loja</label><input id="fBusca" type="text" placeholder="nome ou PDV…" autocomplete="off"></div>
+      <button class="btn" id="limpar">Limpar</button>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh"><h2 id="scopeTtl">Rede completa — 42 lojas</h2><span class="sub" id="scopeSub"></span></div>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <section>
+    <div class="sh"><h2>Tendência — vou bater a PEF do ano?</h2><span class="sub">Projeção de fechamento em 31/12/2026 · "receita a entrar" = venda do ano passado na janela 06/11–31/12 × ritmo</span></div>
+    <div class="tend" id="tend"></div>
+  </section>
+
+  <section>
+    <div class="sh"><h2>Por canal de venda</h2><span class="sub">Realizado no ano vs ano anterior e vs Meta PEF (acumulada até 05/11)</span></div>
+    <div class="canais" id="canais"></div>
+  </section>
+
+  <section>
+    <div class="sh"><h2>Por supervisora</h2><span class="sub">Realizado vs PEF (barra, marca em 100%) e variação vs LY · clique para filtrar</span></div>
+    <div class="ranks" id="ranks"></div>
+  </section>
+
+  <section>
+    <div class="sh"><h2>Por loja</h2><span class="sub" id="tblSub"></span>
+      <span class="fg" style="margin-left:auto"><label for="fOrd">Ordenar</label>
+        <select id="fOrd">
+          <option value="atual">Maior receita</option>
+          <option value="rzasc">Pior realizado (PEF)</option>
+          <option value="rzdesc">Melhor realizado (PEF)</option>
+          <option value="lyasc">Pior vs LY</option>
+          <option value="lydesc">Melhor vs LY</option>
+          <option value="projasc">Pior tendência (PEF ano)</option>
+          <option value="gapanoasc">Maior gap p/ PEF ano (R$)</option>
+        </select></span></div>
+    <div class="tbl-wrap">
+      <table id="tbl">
+        <thead><tr>
+          <th>Loja</th><th>Cidade</th><th>Realizado</th><th>vs LY</th><th>Realiz. PEF</th>
+          <th>A entrar</th><th>Projeção ano</th><th>PEF ano</th><th>Tend. vs PEF</th>
+          <th>Falta/Sobra PEF</th><th>Cresc. p/ meta</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody><tfoot id="tfoot"></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="note">
+      <b>Como a tendência é calculada</b>
+      <ul>
+        <li><b>Realizado:</b> venda de 01/01 a 05/11/2026 (export por PDV). Soma das 42 lojas = <b>R$ 85.357.323,71</b>.</li>
+        <li><b>Receita a entrar:</b> venda do <b>ano passado</b> na janela 06/11 a 31/12/2025 (total R$ 26.568.819,76), × o ritmo que você escolher.</li>
+        <li><b>Meta PEF do ano:</b> R$ 113.087.738,32.</li>
+        <li><b>Ritmo "% realizada LY":</b> projeta cada loja pelo crescimento histórico da própria reta final — média de 2 anos (reta final 2025÷2024 e 2024÷2023). Lojas sem base nos 2 anos (código novo) repetem o ano passado.</li>
+        <li><b>Cenário "abertura de loja":</b> simula a <b>Rodo 2</b> (regional MIRELE/BTSG, fatura a partir de 18/11, <b>sem PEF</b> — só incremento). Premissas ajustáveis: Rodo 2 = % da reta final da Rodo, e queda da Rodo por canibalização.</li>
+        <li><b>Valença</b> é loja nova (sem ano passado); <b>Consultora</b> ainda não disponível (arquivos por PDV).</li>
+      </ul>
+    </div>
+    <div class="foot">Painel Sfera · O Boticário — resultado e tendência por supervisora, loja e canal.</div>
+  </section>
+</main>
+
+<script>
+const ROWS = [["NORTE 2","ALINE","BTZN","Rio De Janeiro",20502,6056758.28,5722256.88,5725663.42,319679.53,331948.88,336281.01,6376437.81,6054205.76,6061944.43,7537386.86,452033.11,7989419.97,1887474.09,117816.5,2005290.59,1896411.12,73276.43,1969687.55,0.98557],["HALFELD","CANTIERI","BTMG","Juiz De Fora",21477,4169533.05,4179164.31,4135383.26,280890.91,295874.57,290331.35,4450423.96,4475038.88,4425714.61,5499142.17,388709.2,5887851.37,1423913.71,93961.52,1517875.23,1259488.93,75771.23,1335260.16,1.11066],["NORTE 1","ALINE","BTZN","Rio De Janeiro",20460,3637356.91,3822564.39,3310367.13,377089.3,389209.69,385728.39,4014446.21,4211774.08,3696095.53,4345593.81,514536.06,4860129.87,1214724.96,111504.93,1326229.89,1100577.66,106191.19,1206768.85,1.02178],["JARDIM NORTE","CANTIERI","BTMG","Juiz De Fora",21482,3289685.85,3903164.91,3361943.06,163003.19,166417.45,159114.28,3452689.04,4069582.36,3521057.34,4473177.68,212075.1,4685252.78,1160876.87,38414.69,1199291.56,1078655.46,41407.75,1120063.21,1.19619],["MARECHAL","CANTIERI","BTMG","Juiz De Fora",21481,3062511.77,3487105.67,3077037.5,122001.5,169891.37,151795.95,3184513.27,3656997.04,3228833.45,4091997.32,195798.44,4287795.76,1042891.89,45251.93,1088143.82,908025.33,31777.37,939802.7,1.05802],["SHOP MADUREIRA","ALINE","BTZN","Rio De Janeiro",20739,3367281.08,3356419.38,3449237.03,213352.32,269672.58,240873.51,3580633.4,3626091.96,3690110.54,4527891.47,317581.68,4845473.15,1029065.58,79459.83,1108525.41,1010209.11,52229.37,1062438.48,1.01695],["ALCANTARA","MIRELE","BTSG","Sao Goncalo",20025,4083184.62,3136735.56,3737376.05,219664.58,198981.54,42640.78,4302849.2,3335717.1,3780016.83,4877828.07,42640.78,4920468.85,1129362.62,86464.56,1215827.18,1241472.86,54374.61,1295847.47,0.93734],["SULACAP","ALINE","BTZN","Rio De Janeiro",20782,2880431.64,2931414.35,3002089.19,220575.67,215890.77,223867.07,3101007.31,3147305.12,3225956.26,3940910.39,300542.05,4241452.44,911940.97,69735.14,981676.11,893324.37,61085.17,954409.54,0.97525],["MANHUACU","MAFORTES","BTMM","Manhuacu",22562,2899108.6,2870816.1,2765574.37,127661.01,117790.52,118494.83,3026769.61,2988606.62,2884069.2,3669687.42,159807.69,3829495.11,939120.21,36143.56,975263.77,810215.14,30610.0,840825.14,1.17014],["INDEPENDENCIA","CANTIERI","BTMG","Juiz De Fora",21468,2596907.31,2863518.33,3062265.92,95822.73,95247.82,102912.41,2692730.04,2958766.15,3165178.33,4065809.56,138180.83,4203990.39,941141.27,37861.28,979002.55,953944.07,28053.53,981997.6,1.01529],["PARTAGE","MIRELE","BTSG","Sao Goncalo",19985,2609864.33,2704721.76,2797177.47,187875.91,201833.24,195071.55,2797740.24,2906555.0,2992249.02,3671918.13,260344.64,3932262.77,867777.75,60184.16,927961.91,905140.55,44821.79,949962.34,0.9425],["SG SHOPPING","MIRELE","BTSG","Sao Goncalo",19939,2346089.17,2238530.71,2482775.35,106805.58,123299.86,111400.17,2452894.75,2361830.57,2594175.52,3259195.36,147311.66,3406507.02,702832.12,34429.15,737261.27,771583.86,21589.93,793173.79,0.98141],["GUANABARA","MIRELE","BTSG","Sao Goncalo",19847,2186872.11,2108051.67,1867906.23,138727.87,104248.12,126174.67,2325599.98,2212299.79,1994080.91,2438631.59,172766.75,2611398.34,578922.57,37703.29,616625.86,540922.62,30928.51,571851.13,1.06617],["OLEGARIO","LEIDI","BTCA","Caratinga",25236,2144838.73,2091673.01,2093766.21,67267.39,64718.02,69288.2,2212106.12,2156391.03,2163054.4,2778253.8,91395.69,2869649.49,691797.17,20515.3,712312.47,0.0,0.0,0.0,1.0],["CALCADAO","ALINE","BTZN","Rio De Janeiro",20902,2120511.55,1969755.91,2164991.97,97752.72,77652.89,16220.0,2218264.27,2047408.8,2181211.97,2826654.38,16220.0,2842874.38,587353.33,34315.51,621668.84,618781.34,23972.09,642753.43,1.01621],["VALQUEIRE","ALINE","BTZN","Rio De Janeiro",21070,1892136.71,1913494.08,1656150.46,105557.24,91402.33,103895.42,1997693.95,2004896.41,1760045.88,2172796.91,139022.11,2311819.02,496573.75,27134.71,523708.46,554460.08,36222.86,590682.94,0.99637],["MISTER","CANTIERI","BTMG","Juiz De Fora",21476,1656797.38,1781217.99,1978387.88,116243.32,125033.22,123234.43,1773040.7,1906251.21,2101622.31,2630547.55,164480.85,2795028.4,626161.56,39862.99,666024.55,647241.14,37831.5,685072.64,0.9971],["POLO 1","ALINE","BTZN","Rio De Janeiro",20738,1880671.75,1776613.4,1959143.18,113756.38,112969.61,115430.44,1994428.13,1889583.01,2074573.63,2570310.1,154110.33,2724420.43,554670.4,33005.19,587675.59,590776.39,29482.19,620258.58,0.92794],["CARATINGA RAUL SOARES","LEIDI","BTCA","Caratinga",23435,1664846.73,1737994.47,1660892.31,55864.92,72287.61,69909.12,1720711.65,1810282.08,1730801.43,2203866.1,91594.0,2295460.1,548391.67,17873.39,566265.06,448663.27,10445.74,459109.01,1.2334],["ST DUMONT","CANTIERI","BTMG","Santos Dumont",23295,1707729.54,1577160.68,1783829.77,37900.77,45877.23,41096.47,1745630.31,1623037.91,1824926.25,2366993.9,55158.15,2422152.05,522272.87,16096.08,538368.95,550577.71,3077.75,553655.46,0.97239],["RODO","MIRELE","BTSG","Sao Goncalo",19836,1639243.58,1485333.65,1640842.28,142049.81,117033.79,144710.64,1781293.39,1602367.44,1785552.92,2142187.73,194523.13,2336710.86,398851.47,46255.57,445107.04,473832.23,32870.51,506702.74,0.98451],["CARREFOUR MG","CANTIERI","BTMG","Juiz De Fora",21478,1349202.67,1509070.48,1419028.61,42645.18,32234.07,39976.19,1391847.85,1541304.55,1459004.8,1887552.68,54730.98,1942283.66,408805.44,15740.36,424545.8,415589.51,10934.28,426523.79,1.00236],["GALERIA 3R","MAFORTES","LIVA","Tres Rios",25321,1372577.89,1426712.44,1593299.55,68284.53,56483.05,67001.42,1440862.42,1483195.49,1660300.97,2090339.26,90911.74,2181251.0,540657.97,22403.64,563061.61,0.0,0.0,0.0,1.0],["QDB","ALINE","BTZN","Rio De Janeiro",910595,1367455.8,1362813.23,1329302.94,25506.51,22345.66,22950.7,1392962.31,1385158.89,1352253.64,1628457.78,29604.7,1658062.48,347374.15,6703.81,354077.96,372893.62,9908.18,382801.8,0.95439],["ST CRUZ","CANTIERI","BTMG","Juiz De Fora",21479,1201354.32,1297838.72,1322672.64,79008.45,72380.97,82088.64,1280362.77,1370219.69,1404761.27,1759189.48,109817.15,1869006.63,440834.72,25357.47,466192.19,440680.7,23772.71,464453.41,0.97539],["IPANEMA","LEIDI","BTMM","Ipanema",22553,1212888.67,1339628.02,1176801.12,13263.29,19052.94,14936.71,1226151.96,1358680.96,1191737.83,1561517.31,19345.42,1580862.73,364401.04,3411.25,367812.29,274397.14,4721.91,279119.05,1.26178],["LEOPOLDINA","MAFORTES","BTMM","Leopoldina",22586,1087612.8,1281070.39,1114484.68,42057.48,46788.6,44772.64,1129670.28,1327858.99,1159257.31,1470819.9,59067.51,1529887.41,395522.88,15223.75,410746.63,365530.57,11620.61,377151.18,1.13889],["CARANDAI","CANTIERI","BTMG","Carandai",23316,1240262.33,1303842.32,1289048.37,14058.4,12187.71,13489.65,1254320.73,1316030.03,1302538.02,1710460.08,18210.1,1728670.18,450074.21,3792.6,453866.81,366749.39,449.9,367199.29,1.23602],["ALAMEDA","CANTIERI","BTMG","Juiz De Fora",21480,1161296.57,1217572.35,1253596.32,59954.47,75486.01,67540.31,1221251.04,1293058.36,1321136.62,1666187.74,89792.86,1755980.6,349681.22,24054.97,373736.19,363605.03,18891.6,382496.63,1.04102],["ALEM PARAIBA","MAFORTES","BTMM","Alem Paraiba",22554,1161681.8,1156872.4,1250356.17,45217.26,60861.62,52671.23,1206899.06,1217734.02,1303027.4,1659118.76,69074.85,1728193.61,401928.57,17631.55,419560.12,405382.88,12641.49,418024.37,1.02814],["CARREFOUR RJ","MIRELE","BTSG","Sao Goncalo",19837,972898.46,1097601.93,1116421.31,77916.51,93114.99,97375.49,1050814.97,1190716.92,1213796.8,1465551.51,128312.51,1593864.02,276744.6,25995.44,302740.04,288735.48,25210.3,313945.78,0.97373],["QUIOSQUE 3R","MAFORTES","LIVA","Tres Rios",21486,1051234.94,1068468.49,1196237.48,37753.97,53059.05,49647.05,1088988.91,1121527.54,1245884.52,1569411.2,65929.2,1635340.4,366803.93,18421.73,385225.66,369939.87,14554.32,384494.19,1.05225],["MANHUMIRIM","MAFORTES","BTMM","Manhumirim",22561,1123439.4,1088520.59,1196665.77,15478.71,19479.41,19206.79,1138918.11,1108000.0,1215872.56,1587876.05,25430.4,1613306.45,336313.12,4089.12,340402.24,302935.94,6173.42,309109.36,1.14363],["MERCADAO","ALINE","BTZN","Rio De Janeiro",20786,1060934.67,1045491.35,1076497.8,56119.4,56299.26,62287.16,1117054.07,1101790.61,1138784.96,1412317.99,82777.41,1495095.4,249926.85,21338.77,271265.62,257897.93,16404.81,274302.74,0.98956],["ESPERA FELIZ","MAFORTES","BTCA","Espera Feliz",23451,964266.13,1068748.14,999295.69,10431.61,20201.43,16865.57,974697.74,1088949.57,1016161.27,1325982.36,22113.71,1348096.07,366079.29,6187.07,372266.36,304058.14,2571.43,306629.57,1.21406],["INHAPIM","LEIDI","BTCA","Inhapim",23434,1057446.87,1023432.77,1089524.29,17325.04,15644.03,3414.33,1074771.91,1039076.8,1092938.62,1445708.22,3414.33,1449122.55,317806.88,4890.45,322697.33,283296.7,687.27,283983.97,1.13632],["CARANGOLA","MAFORTES","BTCA","Carangola",23452,1194709.33,955069.25,1285644.6,15699.69,24999.21,18670.43,1210409.02,980068.46,1304315.03,1706966.76,24223.96,1731190.72,354065.08,4979.44,359044.52,328618.8,761.63,329380.43,1.09006],["AIMORES","LEIDI","BTMM","Aimores",24064,824805.64,957299.56,1046683.66,13935.5,17369.86,15520.45,838741.14,974669.42,1062204.1,1388862.25,20962.59,1409824.84,299712.03,2114.37,301826.4,0.0,0.0,0.0,1.0],["GUANABARA CAMPINHO","ALINE","BTZN","Rio De Janeiro",24128,551247.86,913215.91,962643.5,0.0,30285.94,1540.52,551247.86,943501.85,964184.02,1257777.81,1540.52,1259318.33,204683.32,0.0,204683.32,0.0,0.0,0.0,1.0],["BARROSO","CANTIERI","BTMG","Barroso",23317,740038.84,914031.53,842372.92,13519.2,13025.78,17533.23,753558.04,927057.31,859906.15,1117758.88,23210.31,1140969.19,284156.15,4608.07,288764.22,284396.79,846.44,285243.23,1.01234],["RAUL SOARES","LEIDI","BTMM","Raul Soares",22552,758883.54,867877.53,849872.03,17739.36,23002.8,19309.0,776622.9,890880.33,869181.03,1127709.57,25797.47,1153507.04,239470.79,6727.55,246198.34,200223.12,3827.97,204051.09,1.06065],["VALENCA","CANTIERI","LIVA","Valenca",25182,0.0,638439.98,449182.18,0.0,14415.62,11845.48,0.0,652855.6,461027.66,960146.31,24146.14,984292.45,0,0,0,0,0,0,1.0]];
+const CH={tot:{ly:11,at:12,pef:13,pefA:16,ent:19,entP:22,nm:"Total"}, sal:{ly:5,at:6,pef:7,pefA:14,ent:17,entP:20,nm:"Salão de Vendas"}, cli:{ly:8,at:9,pef:10,pefA:15,ent:18,entP:21,nm:"Clique & Retire"}};
+const DIAS=56, RODO=19836, FENTRY=23; // FENTRY = fator médio de crescimento da reta final (média 2 anos: 25÷24 e 24÷23) por loja
+let ch="tot", fSup="", fReg="", fBusca="", fOrd="atual", fQdb="all", fRitmo="atual", fExtra=0;
+let fAbrir=false, fRodo2Pct=1.10, fRodoDrop=0.175, fGrowthPct=2.4, _UNIF=null;
+const isQDB=r=>r[4]===910595;
+
+const brl=v=>v==null?"—":"R$ "+Math.round(v).toLocaleString("pt-BR");
+const brlC=v=>{if(v==null)return"—";const a=Math.abs(v);
+  return a>=1e6?"R$ "+(v/1e6).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})+" mi":"R$ "+Math.round(v).toLocaleString("pt-BR");};
+const pct=v=>v==null?"—":(v*100).toLocaleString("pt-BR",{minimumFractionDigits:1,maximumFractionDigits:1})+"%";
+const pct0=v=>v==null?"—":(v*100).toLocaleString("pt-BR",{maximumFractionDigits:0})+"%";
+const pctS=v=>v==null?"—":(v>=0?"+":"")+(v*100).toLocaleString("pt-BR",{minimumFractionDigits:1,maximumFractionDigits:1})+"%";
+const rzClass=r=>r==null?"c-warn":r>=1?"c-good":r>=0.95?"c-warn":"c-bad";
+const rzColor=r=>r==null?"var(--warn)":r>=1?"var(--good)":r>=0.95?"var(--warn)":"var(--bad)";
+const lyClass=v=>v==null?"c-warn":v>=0?"c-good":"c-bad";
+
+function agg(rows,c){let ly=0,at=0,pef=0,pefA=0,ent=0,entProj=0;
+  for(const r of rows){ly+=r[c.ly];at+=r[c.at];pef+=r[c.pef];pefA+=r[c.pefA];ent+=r[c.ent];
+    entProj+=r[c.ent]*r[FENTRY];}
+  const g=ly?at/ly-1:null;
+  const f=(_UNIF!=null)?_UNIF:(fRitmo==="ly")?1:(fRitmo==="otim")?1.10:(fRitmo==="cons")?0.90:(g==null?1:1+g);
+  const projRem=(fRitmo==="entryly")?entProj:ent*f, proj=at+projRem;
+  return{ly,at,pef,pefA,ent,g,f,projRem,proj,varLy:g,rz:pef?at/pef:null,gap:at-pef,rzAno:pefA?proj/pefA:null,gapAno:proj-pefA};}
+function filtered(){return ROWS.filter(r=>{
+  if(fQdb==="sem"&&isQDB(r))return false;
+  if(fQdb==="so"&&!isQDB(r))return false;
+  return (!fSup||r[1]===fSup)&&(!fReg||r[2]===fReg)&&
+    (!fBusca||r[0].toLowerCase().includes(fBusca)||String(r[4]).includes(fBusca));});}
+// fator de crescimento uniforme para modos "personalizado" e "bater 100%"; null => cada recorte usa seu próprio ritmo
+function unifFactor(c){
+  if(fRitmo==="custom") return 1+(fGrowthPct/100);
+  if(fRitmo==="meta100"){let at=0,ent=0,pefA=0;for(const r of filtered()){at+=r[c.at];ent+=r[c.ent];pefA+=r[c.pefA];}return ent?(pefA-at)/ent:1;}
+  return null;
+}
+
+function buildTend(){
+  const c=CH[ch]; _UNIF=unifFactor(c); const rows=filtered(), a=agg(rows,c);
+  const need=a.ent?((a.pefA-a.at)/a.ent-1):null;
+  const projBase=a.proj+fExtra, rzBase=a.pefA?projBase/a.pefA:null, gapBase=projBase-a.pefA;
+  const rodo=rows.find(r=>r[4]===RODO);
+  let sc=null;
+  if(fAbrir){
+    const base=rodo?agg([rodo],c).projRem:0;
+    const rodo2=base*fRodo2Pct, drop=base*fRodoDrop, delta=rodo2-drop;
+    const projCom=projBase+delta, rzCom=a.pefA?projCom/a.pefA:null, gapCom=projCom-a.pefA;
+    sc={base,rodo2,drop,delta,projCom,rzCom,gapCom,hasRodo:!!rodo};
+  }
+  const show=sc?{proj:sc.projCom,rz:sc.rzCom,gap:sc.gapCom}:{proj:projBase,rz:rzBase,gap:gapBase};
+  const bate=show.rz!=null&&show.rz>=1;
+  const maxv=Math.max(show.proj,a.pefA)*1.04||1;
+  const w1=a.at/maxv*100, w2=Math.max(0,show.proj-a.at)/maxv*100, gl=a.pefA/maxv*100;
+  const gLabel=a.g==null?"No ritmo do ano":"No ritmo do ano ("+pctS(a.g)+")";
+  const faltaDia=show.gap<0?Math.abs(show.gap)/DIAS:0, faltaLoja=show.gap<0&&rows.length?Math.abs(show.gap)/rows.length:0;
+  const tag=sc?" · com Rodo 2":"";
+
+  let h=`<div class="verdict">
+    <div class="vbig" style="color:${rzColor(show.rz)}">${pct(show.rz)}</div>
+    <div><div class="chip ${rzClass(show.rz)}" style="font-size:14px">${bate?"✓ Tende a BATER a PEF":"✗ Tende a FICAR abaixo"}</div>
+      <div class="vtxt" style="margin-top:5px">Projeção ${brlC(show.proj)} vs Meta PEF ${brlC(a.pefA)}${tag} · ${show.gap>=0?"sobra ":"falta "}<b style="color:${show.gap>=0?'var(--good)':'var(--bad)'}">${brlC(Math.abs(show.gap))}</b></div></div>
+  </div>
+  <div class="needline">🎯 Para bater <b>100% da PEF do ano</b> neste recorte: crescer <b style="color:var(--brand)">${need==null?"—":pctS(need)}</b> vs o ano passado na reta final${need!=null&&a.g!=null?` — hoje você está em <b>${pctS(a.g)}</b>`:""}.</div>
+  <div class="tbar">
+    <div class="seg1" style="width:${w1}%"></div>
+    <div class="seg2" style="left:${w1}%;width:${w2}%"></div>
+    <div class="goal" style="left:${gl}%"></div>
+    <div class="glab" style="left:${gl}%">META ${brlC(a.pefA)}</div>
+  </div>
+  <div class="tleg">
+    <span><i style="background:var(--brand)"></i>Realizado até 05/11</span>
+    <span><i style="background:var(--teal)"></i>A entrar (06/11–31/12)${sc||fExtra?" + cenário":""}</span>
+    <span><i style="background:var(--ink)"></i>Meta PEF do ano</span>
+  </div>
+  <div class="tgrid">
+    <div class="tcard"><div class="k">Realizado</div><div class="v">${brlC(a.at)}</div><div class="n">01/01 a 05/11</div></div>
+    <div class="tcard"><div class="k">Receita a entrar</div><div class="v" style="color:var(--teal)">${brlC(a.projRem)}</div><div class="n">${fRitmo==="ly"?"= ano passado":fRitmo==="entryly"?"ano passado × % LY (2 anos)":"ano passado × ritmo"}</div></div>
+    <div class="tcard"><div class="k">Projeção fim de ano</div><div class="v">${brlC(show.proj)}</div><div class="n">${sc?"com Rodo 2":"realizado + a entrar"}${fExtra?" + extra":""}</div></div>
+    <div class="tcard"><div class="k">Meta PEF do ano</div><div class="v">${brlC(a.pefA)}</div><div class="n">alvo 100%</div></div>
+  </div>`;
+
+  if(sc){
+    h+=`<div class="scbox">
+      <div class="sccard${fAbrir?"":" on"}"><div class="k">Sem abertura</div><div class="v" style="color:${rzColor(rzBase)}">${pct(rzBase)}</div>
+        <div class="n">Projeção ${brlC(projBase)} · ${gapBase>=0?"sobra":"falta"} ${brlC(Math.abs(gapBase))}</div></div>
+      <div class="sccard on"><div class="k">Com Rodo 2 (abre 18/11)</div><div class="v" style="color:${rzColor(sc.rzCom)}">${pct(sc.rzCom)}</div>
+        <div class="n">Projeção ${brlC(sc.projCom)} · ${sc.gapCom>=0?"sobra":"falta"} ${brlC(Math.abs(sc.gapCom))}</div></div>
+    </div>
+    <div class="scmech">${sc.hasRodo
+      ? `Rodo 2 soma <b>${brlC(sc.rodo2)}</b> (${pct0(fRodo2Pct)} da reta final da Rodo) · Rodo cai <b>${brlC(sc.drop)}</b> (${pct0(fRodoDrop)}) · efeito líquido na projeção <b style="color:${sc.delta>=0?'var(--good)':'var(--bad)'}">${sc.delta>=0?"+":"−"}${brlC(Math.abs(sc.delta))}</b>. Rodo 2 não tem PEF (puro incremento).`
+      : `A loja <b>Rodo</b> não está neste recorte, então o cenário Rodo 2 não tem efeito aqui. Selecione a supervisora <b>MIRELE</b>, a regional <b>BTSG</b>, ou veja no total.`}</div>`;
+  }
+
+  h+=`<div class="tctrl">
+    <div class="fg"><label for="fRitmo">Ritmo da reta final</label>
+      <select id="fRitmo">
+        <option value="atual"${fRitmo==="atual"?" selected":""}>${gLabel}</option>
+        <option value="ly"${fRitmo==="ly"?" selected":""}>Repetir ano passado (0%)</option>
+        <option value="otim"${fRitmo==="otim"?" selected":""}>Otimista (+10%)</option>
+        <option value="cons"${fRitmo==="cons"?" selected":""}>Conservador (−10%)</option>
+        <option value="custom"${fRitmo==="custom"?" selected":""}>Personalizado (digite %)</option>
+        <option value="entryly"${fRitmo==="entryly"?" selected":""}>% realizada LY (reta final por loja)</option>
+        <option value="meta100"${fRitmo==="meta100"?" selected":""}>Crescimento p/ bater 100% da PEF</option>
+      </select></div>
+    ${fRitmo==="custom"?`<div class="fg"><label for="fGrow">Crescimento vs ano passado (%)</label>
+      <input id="fGrow" type="number" step="0.5" value="${fGrowthPct}"></div>`:""}
+    ${fRitmo==="meta100"?`<div class="fg"><label>Crescimento aplicado (auto)</label>
+      <div class="readout" style="color:${need!=null&&need>=0?'var(--good)':'var(--bad)'}">${need==null?"— (sem base)":pctS(need)}</div></div>`:""}
+    <div class="fg"><label>Cenário de abertura</label>
+      <div class="segl" role="group">
+        <button data-abrir="0" aria-pressed="${!fAbrir}">Sem abertura</button>
+        <button data-abrir="1" aria-pressed="${fAbrir}">Com Rodo 2</button>
+      </div></div>`;
+  if(fAbrir){
+    const popt=[1.00,1.05,1.10,1.15,1.20,1.25,1.30];
+    const dopt=[0,0.10,0.15,0.175,0.20,0.25];
+    h+=`<div class="fg"><label for="fR2">Rodo 2 (% da reta final da Rodo)</label>
+      <select id="fR2">${popt.map(p=>`<option value="${p}"${Math.abs(p-fRodo2Pct)<1e-6?" selected":""}>${pct0(p)}</option>`).join("")}</select></div>
+    <div class="fg"><label for="fDrop">Queda da Rodo (canibalização)</label>
+      <select id="fDrop">${dopt.map(d=>`<option value="${d}"${Math.abs(d-fRodoDrop)<1e-6?" selected":""}>${(d*100).toLocaleString("pt-BR",{maximumFractionDigits:1})}%</option>`).join("")}</select></div>`;
+  }
+  h+=`<div class="fg"><label for="fExtra">Receita extra avulsa (R$)</label>
+      <input id="fExtra" type="number" step="100000" min="0" placeholder="outras ações" value="${fExtra||""}"></div>
+  </div>`;
+
+  h+= show.gap<0
+    ? `<div class="effort">Para bater a PEF do ano faltam <b>${brl(Math.abs(show.gap))}</b> na reta final${tag} — cerca de <b>${brl(faltaDia)}/dia</b> nos 56 dias${rows.length>1?`, ou <b>${brl(faltaLoja)}</b> por loja`:""}.</div>`
+    : `<div class="effort">Nesse cenário a projeção <b>supera a PEF do ano</b> em <b>${brl(show.gap)}</b>. 👏</div>`;
+  return h;
+}
+function attachTendHandlers(){
+  const g=id=>document.getElementById(id);
+  g("fRitmo").onchange=e=>{fRitmo=e.target.value;render();};
+  g("fExtra").oninput=e=>{fExtra=parseFloat(e.target.value)||0;paintTend();};
+  if(g("fGrow")) g("fGrow").oninput=e=>{fGrowthPct=parseFloat(e.target.value)||0;const p=e.target.selectionStart;render();const el=document.getElementById("fGrow");if(el){el.focus();try{el.setSelectionRange(p,p);}catch(_){}}};
+  document.querySelectorAll("[data-abrir]").forEach(b=>b.onclick=()=>{fAbrir=b.dataset.abrir==="1";paintTend();});
+  if(g("fR2")) g("fR2").onchange=e=>{fRodo2Pct=parseFloat(e.target.value);paintTend();};
+  if(g("fDrop")) g("fDrop").onchange=e=>{fRodoDrop=parseFloat(e.target.value);paintTend();};
+}
+function paintTend(){
+  const host=document.getElementById("tend");
+  const act=document.activeElement, actId=act&&act.id, s=act&&act.selectionStart;
+  host.innerHTML=buildTend(); attachTendHandlers();
+  if(actId){const el=document.getElementById(actId); if(el){el.focus(); try{el.setSelectionRange(s,s);}catch(e){}}}
+}
+
+function render(){
+  const c=CH[ch]; _UNIF=unifFactor(c); const rows=filtered(), a=agg(rows,c);
+  let baseLbl=fQdb==="so"?"Somente QDB":fQdb==="sem"?"Rede sem QDB":"Rede completa";
+  let st=baseLbl+" — "+rows.length+" loja"+(rows.length!==1?"s":"");
+  if(fSup) st=fSup+(fQdb==="sem"?" (sem QDB)":"")+" — "+rows.length+" loja"+(rows.length!==1?"s":"");
+  if(fReg) st+=" · regional "+fReg;
+  document.getElementById("scopeTtl").textContent=st;
+  document.getElementById("scopeSub").textContent="Canal: "+c.nm;
+
+  document.getElementById("kpis").innerHTML=`
+    <div class="kpi accent"><div class="lab">Realizado no ano</div><div class="big">${brlC(a.at)}</div><div class="sub">${brl(a.at)}</div></div>
+    <div class="kpi"><div class="lab">vs Ano anterior</div><div class="big">${pctS(a.varLy)}</div>
+      <div class="sub"><span class="chip ${lyClass(a.varLy)}">${a.varLy>=0?"▲":"▼"} ${brlC(Math.abs(a.at-a.ly))}</span></div></div>
+    <div class="kpi"><div class="lab">Meta PEF (até 05/11)</div><div class="big">${brlC(a.pef)}</div><div class="sub">LY: ${brlC(a.ly)}</div></div>
+    <div class="kpi"><div class="lab">Realizado vs PEF</div><div class="big">${pct(a.rz)}</div>
+      <div class="sub"><span class="chip ${rzClass(a.rz)}">${a.gap>=0?"▲ acima":"▼ falta"} ${brlC(Math.abs(a.gap))}</span></div></div>`;
+
+  document.getElementById("tend").innerHTML=buildTend();
+  attachTendHandlers();
+
+  const names={sal:"Salão de Vendas",cli:"Clique & Retire",tot:"Total (2 canais)"};
+  document.getElementById("canais").innerHTML=["sal","cli","tot"].map(k=>{const x=agg(rows,CH[k]);
+    return `<div class="cc ${k}"><span class="rail"></span><h3>${names[k]}</h3><div class="v">${brlC(x.at)}</div>
+      <div class="grid2">
+        <div class="mini"><div class="k">vs LY</div><div class="val" style="color:${x.varLy==null?'var(--ink)':x.varLy>=0?'var(--good)':'var(--bad)'}">${pctS(x.varLy)}</div></div>
+        <div class="mini"><div class="k">Realizado PEF</div><div class="val" style="color:${rzColor(x.rz)}">${pct(x.rz)}</div></div>
+        <div class="mini"><div class="k">Meta PEF</div><div class="val">${brlC(x.pef)}</div></div>
+        <div class="mini"><div class="k">Gap PEF</div><div class="val" style="color:${x.gap>=0?'var(--good)':'var(--bad)'}">${(x.gap>=0?'+':'−')}${brlC(Math.abs(x.gap))}</div></div>
+      </div></div>`;}).join("");
+
+  const sups=[...new Set(rows.map(r=>r[1]))];
+  const sd=sups.map(s=>({s,a:agg(rows.filter(r=>r[1]===s),c)})).sort((x,y)=>y.a.rz-x.a.rz);
+  document.getElementById("ranks").innerHTML=sd.map(({s,a})=>{const w=Math.max(2,Math.min(118,(a.rz||0)*100));
+    return `<div class="rk ${fSup===s?'on':''}" data-sup="${s}">
+      <div class="top"><div><div class="nm">${s}</div><div class="sm">${rows.filter(r=>r[1]===s).length} lojas · ${brlC(a.at)} · tend. ${pct(a.rzAno)}</div></div>
+        <div class="rz" style="color:${rzColor(a.rz)}">${pct(a.rz)}</div></div>
+      <div class="bar"><div class="fill" style="width:${w}%;background:${rzColor(a.rz)}"></div><div class="goal" style="left:${Math.min(100,100/1.18)}%"></div></div>
+      <div class="ln"><span class="muted">realizado vs PEF</span><span style="color:${a.varLy>=0?'var(--good)':'var(--bad)'}">${pctS(a.varLy)} vs LY</span></div></div>`;}).join("");
+  document.querySelectorAll(".rk").forEach(el=>el.onclick=()=>{const s=el.dataset.sup;fSup=(fSup===s?"":s);document.getElementById("fSup").value=fSup;render();});
+
+  let tr=rows.map(r=>({r,x:agg([r],c)}));
+  const S={atual:(p,q)=>q.x.at-p.x.at, rzasc:(p,q)=>(p.x.rz??9)-(q.x.rz??9), rzdesc:(p,q)=>(q.x.rz??-9)-(p.x.rz??-9),
+    lyasc:(p,q)=>(p.x.varLy??9)-(q.x.varLy??9), lydesc:(p,q)=>(q.x.varLy??-9)-(p.x.varLy??-9),
+    projasc:(p,q)=>(p.x.rzAno??9)-(q.x.rzAno??9), gapanoasc:(p,q)=>p.x.gapAno-q.x.gapAno};
+  tr.sort(S[fOrd]);
+  document.getElementById("tbody").innerHTML=tr.map(({r,x})=>{const w=Math.max(2,Math.min(100,(x.rz||0)*100));
+    const lyTxt=x.varLy==null?'<span class="muted">nova</span>':`<span class="${x.varLy>=0?'val-pos':'val-neg'}">${pctS(x.varLy)}</span>`;
+    return `<tr>
+      <td class="loja">${r[0]}<span class="sup">${r[1]} · PDV ${r[4]}</span></td>
+      <td>${r[3]}</td><td>${brl(x.at)}</td><td>${lyTxt}</td>
+      <td style="color:${rzColor(x.rz)};font-weight:800">${pct(x.rz)}<span class="minibar"><i style="width:${w}%;background:${rzColor(x.rz)}"></i></span></td>
+      <td style="color:var(--teal)">${brl(x.projRem)}</td><td>${brl(x.proj)}</td><td>${brl(x.pefA)}</td>
+      <td style="color:${rzColor(x.rzAno)};font-weight:800">${pct(x.rzAno)}</td>
+      <td class="${x.gapAno>=0?'val-pos':'val-neg'}">${(x.gapAno>=0?'+':'−')}${brl(Math.abs(x.gapAno))}</td>
+      <td>${(()=>{const n=x.ent?((x.pefA-x.at)/x.ent-1):null;return n==null?'<span class="muted">—</span>':`<span class="${n<=0?'val-pos':n<=0.10?'':'val-neg'}" style="font-weight:800">${pctS(n)}</span>`;})()}</td></tr>`;}).join("");
+  document.getElementById("tfoot").innerHTML=`<tr>
+    <td>TOTAL — ${rows.length} loja${rows.length!==1?'s':''}</td><td></td><td>${brl(a.at)}</td>
+    <td class="${a.varLy>=0?'val-pos':'val-neg'}">${pctS(a.varLy)}</td>
+    <td style="color:${rzColor(a.rz)}">${pct(a.rz)}</td>
+    <td style="color:var(--teal)">${brl(a.projRem)}</td><td>${brl(a.proj)}</td><td>${brl(a.pefA)}</td>
+    <td style="color:${rzColor(a.rzAno)}">${pct(a.rzAno)}</td>
+    <td class="${a.gapAno>=0?'val-pos':'val-neg'}">${(a.gapAno>=0?'+':'−')}${brl(Math.abs(a.gapAno))}</td>
+    <td>${(()=>{const n=a.ent?((a.pefA-a.at)/a.ent-1):null;return n==null?'—':pctS(n);})()}</td></tr>`;
+  document.getElementById("tblSub").textContent=c.nm+" · "+rows.length+" loja"+(rows.length!==1?"s":"");
+}
+
+function fillSelect(id,vals){const el=document.getElementById(id);
+  vals.sort().forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=v;el.appendChild(o);});}
+function boot(){
+  fillSelect("fSup",[...new Set(ROWS.map(r=>r[1]))]);
+  fillSelect("fReg",[...new Set(ROWS.map(r=>r[2]))]);
+  document.querySelectorAll(".seg button").forEach(b=>b.onclick=()=>{ch=b.dataset.ch;
+    document.querySelectorAll(".seg button").forEach(x=>x.setAttribute("aria-pressed",x===b));render();});
+  document.getElementById("fSup").onchange=e=>{fSup=e.target.value;render();};
+  document.getElementById("fReg").onchange=e=>{fReg=e.target.value;render();};
+  document.getElementById("fBusca").oninput=e=>{fBusca=e.target.value.trim().toLowerCase();render();};
+  document.getElementById("fOrd").onchange=e=>{fOrd=e.target.value;render();};
+  document.getElementById("fQdb").onchange=e=>{fQdb=e.target.value;render();};
+  document.getElementById("limpar").onclick=()=>{fSup=fReg=fBusca="";fOrd="atual";fQdb="all";fRitmo="atual";fExtra=0;fAbrir=false;fRodo2Pct=1.10;fRodoDrop=0.175;fGrowthPct=2.4;
+    document.getElementById("fSup").value="";document.getElementById("fReg").value="";
+    document.getElementById("fBusca").value="";document.getElementById("fOrd").value="atual";
+    document.getElementById("fQdb").value="all";render();};
+  render();
+}
+boot();
+</script>
