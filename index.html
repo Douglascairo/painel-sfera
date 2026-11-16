@@ -317,7 +317,7 @@ function buildTend(){
   </div>
   <div class="tleg">
     <span><i style="background:var(--brand)"></i>Realizado até 15/11</span>
-    <span><i style="background:var(--teal)"></i>A entrar (06/11–31/12)${sc||fExtra?" + cenário":""}</span>
+    <span><i style="background:var(--teal)"></i>A entrar (16/11–31/12)${sc||fExtra?" + cenário":""}</span>
     <span><i style="background:var(--ink)"></i>Meta PEF do ano</span>
   </div>
   <div class="tgrid">
@@ -405,7 +405,7 @@ function render(){
     <div class="kpi accent"><div class="lab">Realizado no ano</div><div class="big">${brlC(a.at)}</div><div class="sub">${brl(a.at)}</div></div>
     <div class="kpi"><div class="lab">vs Ano anterior</div><div class="big">${pctS(a.varLy)}</div>
       <div class="sub"><span class="chip ${lyClass(a.varLy)}">${a.varLy>=0?"▲":"▼"} ${brlC(Math.abs(a.at-a.ly))}</span></div></div>
-    <div class="kpi"><div class="lab">Meta PEF (até 05/11)</div><div class="big">${brlC(a.pef)}</div><div class="sub">LY: ${brlC(a.ly)}</div></div>
+    <div class="kpi"><div class="lab">Meta PEF (até 15/11)</div><div class="big">${brlC(a.pef)}</div><div class="sub">LY: ${brlC(a.ly)}</div></div>
     <div class="kpi"><div class="lab">Realizado vs PEF</div><div class="big">${pct(a.rz)}</div>
       <div class="sub"><span class="chip ${rzClass(a.rz)}">${a.gap>=0?"▲ acima":"▼ falta"} ${brlC(Math.abs(a.gap))}</span></div></div>`;
 
